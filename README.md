@@ -92,4 +92,3 @@ git push
 - 找不到 PR 按钮时，在原仓库点 **Pull requests → New pull request → compare across forks**，按第 5 步选择目标和来源。
 - push 报 403 时，运行 `git remote -v`，确认 origin 地址指向自己的副本，同时确认登录的是自己的账号。
 - git commit 提示 **Please tell me who you are** 时，先执行 `git config --global user.name "你的名字"` 和 `git config --global user.email "你的邮箱"`，再重新提交。
-- 其他问题可以在群里问，附上操作步骤和报错截图。
