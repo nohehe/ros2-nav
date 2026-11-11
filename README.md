@@ -6,8 +6,6 @@
 
 在自己的 ROS2 工作空间里创建一个 `ament_cmake` 功能包，用 C++ 写一个发布者和一个订阅者。消息和回复自己定。比如发布者发“你好”，订阅者收到后在终端显示“你好 → 你好呀”。最后写一个 launch 文件，让两个节点一起启动。截图要能看清收到的原文和对应回复。
 
-**看哪些视频？** 先按需看[在 Ubuntu 中安装 ROS2](https://www.bilibili.com/video/BV1Jz421B7Ey/)。打开[第一个 C++ 节点](https://www.bilibili.com/video/BV1FH4y1c7Px/)后，在右侧合集按顺序找：2.1.2、2.3、2.4 学节点、功能包和工作空间，3.1、3.2.1、3.2.2 学收发消息，最后看 [4.6.1 用 launch 启动多个节点](https://www.bilibili.com/video/BV1hdtLeZE9y/)。
-
 ## 二、文件放哪里
 
 在提交仓库最外层建一个自己的文件夹，名字按 **入学年份后两位 + 专业简称 + 姓名** 连起来写。下面用“26电科张三”举例。打开你的文件夹，再建一层“导航培训1”，把三样材料放进去：
@@ -57,5 +55,5 @@ git push
 
 - **刚才已经 push 了，为什么列表里没有我？** push 只把文件传到了你自己的副本。继续做第 5 步，创建 PR 才算交到原仓库。
 - **网页上找不到提 PR 的按钮？** 在原仓库点 **Pull requests → New pull request → compare across forks**，按第 5 步选目标和来源。如果之前按旧说明建了 submit-week1 分支，来源就选实际放作业的那个分支。
-- **push 提示 403？** 在终端运行 `git remote -v`，看看 origin 地址里的用户名是不是你自己。如果指向 nohehe 的原仓库，就从自己副本的 Code 按钮复制 HTTPS 地址，执行 `git remote set-url origin 你复制的地址` 后再 push，同时确认登录的是自己的账号。
+- **push 提示 403？** 在终端运行 `git remote -v`，看看 origin 地址里的用户名是不是你自己。如果指向原仓库，就从自己副本的 Code 按钮复制 HTTPS 地址，执行 `git remote set-url origin 你复制的地址` 后再 push，同时确认登录的是自己的账号。
 - **负责人让我改一下，怎么补交？** 在原来那份代码、同一个分支上改，重复第 4 步。刷新原来的 PR 就能看到修改，每人保留一个 PR 即可。
