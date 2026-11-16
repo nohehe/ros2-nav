@@ -92,3 +92,44 @@ git push
 - 找不到 PR 按钮时，在原仓库点 **Pull requests → New pull request → compare across forks**，按第 5 步选择目标和来源。
 - push 报 403 时，运行 `git remote -v`，确认 origin 地址指向自己的副本，同时确认登录的是自己的账号。
 - git commit 提示 **Please tell me who you are** 时，先执行 `git config --global user.name "你的名字"` 和 `git config --global user.email "你的邮箱"`，再重新提交。
+
+
+## 培训2作业
+
+培训2继续放在自己的个人目录下，与培训1使用同一个 PR，不要重新 Fork、不要新建 PR。
+
+目录示例：
+
+```text
+26电科张三/
+├── 导航培训1/
+└── 导航培训2/
+    ├── week2_demo/       ← 作业代码
+    └── 运行截图/
+        ├── 仿真终端.png
+        ├── 启动日志.png
+        ├── Gazebo画面.png
+        ├── 激光数据.png
+        └── 遇障停车.png
+```
+
+完成以下内容：
+
+- [ ] 成功编译工作空间
+- [ ] 成功启动 Gazebo 仿真
+- [ ] 使用 /cmd_vel 控制机器人运动
+- [ ] 查看 /scan 激光数据
+- [ ] 完成自动连续动作
+- [ ] 完成遇障停车
+
+需要提交仿真终端截图、启动日志截图、Gazebo 画面截图、激光数据截图、遇障停车截图和作业代码。不要提交 build、install 和 log 文件夹。
+
+继续在原来的仓库目录中执行：
+
+```bash
+git add .
+git commit -m "培训2 - 26电科张三"
+git push
+```
+
+推送后刷新原来的 PR，培训2内容会自动出现在同一个 PR 中。
