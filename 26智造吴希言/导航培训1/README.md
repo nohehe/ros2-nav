@@ -37,16 +37,33 @@
 
 ## 编译
 
-先把包放进工作空间的 `src/`：
+**第 0 步：先 source ROS2 环境。** 这一步不能省——新开的终端里如果不先 source，`colcon build` 会直接报找不到 `ament_cmake`（`Could not find a package configuration file provided by "ament_cmake"`）。
 
 ```bash
+source /opt/ros/lyrical/setup.bash
+```
+
+确认一下装对了发行版：
+
+```bash
+echo $ROS_DISTRO     # 应该输出 lyrical
+```
+
+**第 1 步：把 `chat_demo` 整个目录复制到工作空间的 `src/` 下。**
+
+`chat_demo` 就在本 README 同级的 `chat_demo/` 目录里（即 `导航培训1/chat_demo/`）。先 `cd` 进 `导航培训1/`，再执行：
+
+```bash
+# 在 导航培训1/ 目录下执行（这个目录里能看到 chat_demo/ 和 运行截图.png）
 mkdir -p ~/ros2_ws/src
 cp -r chat_demo ~/ros2_ws/src/
 cd ~/ros2_ws
 colcon build --packages-select chat_demo
 ```
 
-编译完必须 source 一下，不然 `ros2 run` 找不到包：
+> 复制完可以先确认一下：`ls ~/ros2_ws/src/chat_demo` 应该能看到 `package.xml`、`CMakeLists.txt`、`src/`、`launch/`。
+
+**第 2 步：source 工作空间，不然 `ros2 run` / `ros2 launch` 找不到这个包。**
 
 ```bash
 source install/setup.bash
