@@ -7,3 +7,6 @@ __pycache__/
 *.o
 *.pyc
   
+build/
+install/
+log/
