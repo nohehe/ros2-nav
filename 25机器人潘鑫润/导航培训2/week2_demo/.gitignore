@@ -1,0 +1,12 @@
+# ROS2 colcon 编译产物
+build/
+install/
+log/
+
+# Python缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# vscode配置（可选，想上传就删掉这一行）
+.vscode/
