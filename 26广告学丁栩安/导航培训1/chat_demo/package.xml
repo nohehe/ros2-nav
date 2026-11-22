@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<!--
+  package.xml 是"功能包的身份证"。
+  colcon / ros2 命令靠它知道：这个包叫什么、怎么编译、依赖哪些其他包。
+  format="3" 是 ROS2 使用的清单格式版本。
+-->
+<package format="3">
+
+  <!-- 包名。必须和文件夹名一致，也必须和 CMakeLists.txt 里 project() 的名字一致。
+       只允许小写字母、数字、下划线。 -->
+  <name>chat_demo</name>
+
+  <version>0.0.1</version>
+
+  <!-- 一句话描述这个包是干什么的 -->
+  <description>ROS2 话题通信入门作业：一个发布者节点和一个订阅者节点</description>
+
+  <!-- 维护者，必须写，邮箱随便填 -->
+  <maintainer email="dingxuan@example.com">dingxuan</maintainer>
+
+  <!-- 开源协议。作业用 Apache-2.0 即可 -->
+  <license>Apache-2.0</license>
+
+  <!-- ====== 编译工具依赖 ====== -->
+  <!-- 我们是 C++ 的 ament_cmake 包，所以要有这个"构建工具"依赖。
+       对应的 Python 包则是 ament_python，两者的 CMakeLists.txt 写法完全不同。 -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- ====== 运行/编译都要用到的依赖 ====== -->
+  <!-- rclcpp：ROS2 的 C++ 客户端库，Node / Publisher / Subscription 都来自它 -->
+  <depend>rclcpp</depend>
+  <!-- std_msgs：ROS2 自带的标准消息类型包，String 消息就在里面 -->
+  <depend>std_msgs</depend>
+
+  <!-- ====== 测试依赖（作业不强制，保留是标准模板写法） ====== -->
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <!-- ====== 告诉 ros2 这个包是什么类型 ====== -->
+  <!-- build_type 必须是 ament_cmake，否则 ros2 launch 找不到我们的可执行文件 -->
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
